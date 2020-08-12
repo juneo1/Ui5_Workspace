@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-compatVersion="edge"
+				data-sap-ui-language="ko"
+				data-sap-ui-onInit="module:sap/ui/demo/walkthrough/index"
+				data-sap-ui-resourceroots='{
+					"sap.ui.demo.walkthrough": "./"
+					}'>
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+	
+<!-- "sap.ui.demo.walkthrough": "./"  = resourceroot = webcontent를 root로 지정
+index.html -> index.js -> component.js ( <-manifest.json) -> view.xml -> controller
+ui5에서 파일을 정의할 때 sap.ui.define에서 첫번 째 인자로 배열을 받는다.
+배열에는 control을 받는데 sap.m에 들어있는 text라는 컨트롤을 사용하겠다고 정의하는것.
+그렇게하면 ui5에서 인자를 찾아서 함수에 넘겨준다. -->
+
+</html>
