@@ -1,0 +1,51 @@
+<core:View xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="button.App"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+<!--  			 <Input value="{/saveKey}" change=".changeSaveKey" />
+			<VBox>
+				<HBox>
+					<Button text="Enabled:false" enabled="{/buttonEnabled}" />
+					<Button text="Only Text" />
+				</HBox>
+				<HBox>
+					VBox: Vertical, HBOX: Horizon
+					<Button icon="sap-icon://badge" />
+					<Button icon="sap-icon://save" text="save" />
+				</HBox>
+				<HBox>
+					<Button icon="sap-icon://save" text="save" iconfirst="false" />
+					<Button text="Defalut Type" type="Default" />
+				</HBox>
+				<HBox>
+					<Button text="Reject Type" type="Reject" />
+					<Button text="Success 
+				Type" type="Success" />
+				</HBox>
+				<HBox>
+					<Button text="Accept Type" type="Accept" />
+					<Button text="Negative Type" type="Negative" />
+				</HBox> 
+				<Button text="Ghost 
+				Type" type="Ghost" /> 
+			</VBox>  -->
+			<VBox>
+				<HBox>
+				<!-- 동적으로 세팅하는 방법은 2가지가 있다. 1.바인딩 2.  -->
+					<Button text="A" type="{/firstBtn}" />
+					<Button text="B" type="{/btnType}" />
+					<Button text="C" type="{/btnType}" />
+					<Button text="D" type="{/btnType}" />
+					<Button text="E" type="{/lastBtn}" />
+				</HBox>
+				<HBox>
+					<Button text="First" type="Default" press=".onPressFirstBtn" />
+					<Button text="Last" type="Default" press=".onPressLastBtn" />
+					<Button text="All" type="Default" press=".onPressAllBtn" />
+					<Button text="Clear" type="Default" press=".onPressClearBtn" />
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</core:View>

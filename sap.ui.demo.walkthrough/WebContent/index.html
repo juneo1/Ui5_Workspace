@@ -10,7 +10,7 @@
 				data-sap-ui-theme="sap_bluecrystal"
 				data-sap-ui-compatVersion="edge"
 				data-sap-ui-language="ko"
-				data-sap-ui-onInit="module:sap/ui/demo/walkthrough/index"
+				data-sap-ui-onInit="module:sap/ui/core/ComponentSupport"
 				data-sap-ui-resourceroots='{
 					"sap.ui.demo.walkthrough": "./"
 					}'>
@@ -19,8 +19,8 @@
 
 
 	</head>
-	<body class="sapUiBody" role="application">
-		<div id="content"></div>
+	<body class="sapUiBody" id="content">
+		<div data-sap-ui-component data-name="sap.ui.demo.walkthrough" data-id="container" data-setting='{"id":"walkthrough"'></div>
 	</body>
 	
 <!-- "sap.ui.demo.walkthrough": "./"  = resourceroot = webcontent를 root로 지정
