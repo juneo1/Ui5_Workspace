@@ -16,8 +16,6 @@ sap.ui.define([
 			// 모델에 getProPerty 함수는 경로에 있는 데이터의 값을 retrun해준다. 
 			var sMsg = oBundle.getText("helloMsg", [sRecipient]);
 			// 위에서 받은 문자열을 helloMsg라는 데이터를 가져오고 placeholder에 넣어준다.
-//			var sMsg = "길동" + oBundle.getText("helloMsg1");
-			
 			MessageToast.show(sMsg);
 		},
 		
@@ -26,11 +24,6 @@ sap.ui.define([
 		},
 		
 		onOpenDialog : function() {
-//			var oBundle = this.getView().getModel("i18n").getResourceBundle();
-//			var sMsg = oBundle.getText("dialogMsg");
-//			MessageToast.show(sMsg);
-			
-			
 			// fragment에서 dialog를 쓸 때 UI5는 id중복을 허락하지 않기 때문에 View의 id를 붙여서 호출해서 중복이 일어나지 않게 호출한다.
 			var oView = this.getView();
 			
