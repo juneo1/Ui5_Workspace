@@ -1,20 +1,20 @@
 <mvc:View
-	controllerName = "sap.ui.demo.walkthrough.controller.App"         
-	xmlns="sap.m"       			
-	xmlns:mvc="sap.ui.core.mvc"> 
-	<Button text= "{i18n>showHelloButtonText}" press=".onShowHello" />
-	<Input 
-	 	value="{/recipient/name}"
-	 	description="Hello {/recipient/name}"
-	 	valueLiveUpdate="true"
-	 	width="60%" />
-	<VBox>
-		<Label text="apple" />
-		<Input value="{fruit>/apple/price}" width = "60%" />	 
-		</VBox>
+	controllerName="sap.ui.demo.walkthrough.controller.App" xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+	<Shell>
+		<App class="myAppDemoWT">
+			<pages>
+				<Page title="{i18n>homePageTitle}">
+					<content>
+						<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel" />
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
 </mvc:View>
 
-<!-- setmodel을 할때 fruit라는 모델이름으로 적어주고 기호를 넣어준다 ( 모델이름 > ) 그 다음 부터 해당 속성  -->
+<!-- setmodel을 할때 fruit라는 모델이름으로 적어주고 기호를 넣어준다 ( 모델이름 > ) 그 다음 부터 해당 속성 -->
 <!-- controllerName의 경로를 알려준다 -->
 <!-- xmlns에서 ns는 namespace의 줄임말. -->
-<!-- view에서 alias를 지정해준다는 의미  -->
+<!-- view에서 alias를 지정해준다는 의미 -->
