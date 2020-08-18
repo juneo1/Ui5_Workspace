@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog
+		id="exitDialog"
+		title="Exit Dialog"
+		contentWidth="50%"
+		contentHeight="40%">
+		<VBox>
+			<Text text="해당하는 값이 없습니다." />
+		</VBox>
+		<beginButton>
+			<Button
+				text="{i18n>dialogCloseButtonText}"
+				press=".onCloseDialog" />
+		</beginButton>
+	</Dialog>	
+</core:FragmentDefinition>

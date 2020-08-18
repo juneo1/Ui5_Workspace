@@ -1,0 +1,26 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.App" xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+	<Shell>
+		<App class="myAppDemoWT">
+			<pages>
+				<Page title="{i18n>homePageTitle}">
+					<content>
+						<VBox>
+							<HBox>
+								<Input value="{/recipient/number}" description=""
+									valueLiveUpdate="true" width="100%" />
+								<Button text="{i18n>showHelloButtonText}"
+									press=".onShowHello" class="myCustomButton" />
+							</HBox>
+							<HBox>
+								<Text text="{/recipient/data}" />
+							</HBox>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
+

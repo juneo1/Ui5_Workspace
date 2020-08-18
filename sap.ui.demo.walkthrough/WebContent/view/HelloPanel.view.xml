@@ -19,7 +19,7 @@
 				valueLiveUpdate="true"
 				width="60%" />
 				
-			<Text text="Hello {recipient.name}"
+			<Text text="Hello {/recipient/name}"
 				class="sapUiSmallMargin myCustomText" />
 				
 			
