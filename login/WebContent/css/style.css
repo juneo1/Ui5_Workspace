@@ -1,0 +1,28 @@
+html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
+	margin-right : 0.125rem
+}
+
+html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
+	margin-right : 0.125rem
+}
+
+.myAppDemoWT .myCustomText {
+	display : inline-block;
+	font-weight : bold;
+	font-size : 25px;
+	Color: orange;
+	
+}
+
+.vBox {
+	margin-top : 250px;
+}
+/* 
+
+1. 아이디 의미 : 클래스는 .을붙이고, 아이디는 #을 붙인다. 
+2. .의 의미 : 점이 두개가 있으면 두개의클래스가 붙어있는 것을 의미한다. 연속적으로 클래스가 붙어있으면 하나의 태그 안에 클래스가 같이 들어가있을떄만 css가 적용된다. 
+3. 공백의 의미 : 공백으로 붙어있는 부분은 앞에 클래스가 부모클래스에 있어야 하고, 뒷부분은 자식클래스에 있어야 한다.
+
+*/
+
+

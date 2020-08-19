@@ -29,13 +29,13 @@ sap.ui.define([
 				for(var i=1; i<=sRecipient; i++) {
 					var gugutext2= "";
 					for(var j=1; j<10; j++){
-						gugutext2 += (i + " * " + j + " = " + i*j + "\n");
+						gugutext += (i + " * " + j + " = " + i*j + "\n");
 					}
 				aGugu[i] = gugutext2 ;
 				}
 
-//				oModel.setProperty("/recipient/data", gugutext);
-				oModel.setProperty("/recipient/data", aGugu);
+				oModel.setProperty("/recipient/data", gugutext);
+//				oModel.setProperty("/recipient/data", aGugu);
 			}
 		},
 		

@@ -1,0 +1,21 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.App" xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+
+	<App class="myAppDemoWT" backgroundImage="./image/background.jpg" backgroundOpacity="0.5">
+		<FlexBox height="100%" width="100%">
+			<VBox class="vBox" alignItems="Center" >
+				<Text text="3조 로그인 화면" class="sapUiSmallMargin myCustomText" />
+				<Input value="{/account/id}" description=""
+					valueLiveUpdate="true" width="100%" placeholder="사원번호" />
+				<Input value="{/account/password}" type="Password"
+					description="" valueLiveUpdate="true" width="100%"
+					placeholder="비밀번호" />
+				<Button text="{i18n>showHelloButtonText}" type="Emphasized"
+					press=".onLogin" />
+			</VBox>
+		</FlexBox>
+	</App>
+
+</mvc:View>
+

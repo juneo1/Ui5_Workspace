@@ -14,7 +14,7 @@
 									press=".onShowHello" class="myCustomButton" />
 							</HBox>
 							<HBox>
-								<Text text="{/recipient/data}" />
+								<Text text="{/recipient/data}" setMaxLines="9" setTextDirection = "LTR" />
 							</HBox>
 						</VBox>
 					</content>
