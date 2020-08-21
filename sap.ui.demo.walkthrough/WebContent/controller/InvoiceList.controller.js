@@ -34,6 +34,13 @@ sap.ui.define([
 			var oList = this.byId("invoiceList");
 			var oBinding = oList.getBinding("items");
 			oBinding.filter(aFilter); // 필터에 배열을 넣어줘서 해당 결과값을 배열로 받는다.
+		},
+		
+		onPress : function (oEvent) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("detail");
+			// 가고 싶은 page의 이름을 적어준다.
+			
 		}
 	})
 })

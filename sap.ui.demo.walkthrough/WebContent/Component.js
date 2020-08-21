@@ -40,6 +40,9 @@ sap.ui.define([
 					that.setModel(oInvoiceModel, "invoice");
 				}
 			});
+			
+			this.getRouter().initialize();
+			// 라우터라는 객체를 initialize하는 구문
 		}
 	})
 })
