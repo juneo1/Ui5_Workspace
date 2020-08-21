@@ -3,10 +3,17 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 	<List 
-		headerText="{i18n>invoiceListTitle}"
+		id = "invoiceList"
 		class="sapUiResponsiveMargin"
 		width="auto"
 		items="{invoice>/Invoices}" >  <!--객체가 있을 때는 /를 꼭 사용해서 바인딩 해줘야 한다. -->
+		<headerToolbar>
+			<Toolbar>
+				<Title text="{i18n>invoiceListTitle}" />
+				<ToolbarSpacer /> <!-- 툴바사이에 공간을 두는 태그  -->
+				<SearchField width="50%" search=".onFilterInvoices" />
+			</Toolbar>
+		</headerToolbar>
 		<items>
 			<ObjectListItem 
 				title="{invoice>Quantity} x {invoice>ProductName}" 
@@ -17,9 +24,25 @@
 					showMeasure: false
 						}
 					}"
-				numberUnit="{invoice>Currency}"/>
+				numberUnit="{invoice>Currency}"
+				numberState="{= ${invoice>ExtendedPrice} > 5 &amp;&amp; 10 > ${invoice>ExtendedPrice} ? 'Error' : 'Success'}" >
+				<!-- 표현식을 사용할 때는 {= 표시를 하고 사용한다}, $를 붙여주면 반복되면서 해당 row의 데이터를 가져온다.   -->
 				<!-- 여러개의 데이터를 표기하고 싶을 때 parts라는 구문을 사용해서 여러개를 표기 할 수 있다. 서로 다른 모델에 있는 데이터를 불러와도 상관없다.(invoice나 view나) -->
 				<!-- number는 위에 표기되는 컨텐츠고 numberUnit은 작게 표시되는 단위  -->
+				
+				<firstStatus>
+			<!-- 		<ObjectStatus text="{
+						path: 'invoice>Status',
+						formatter: '.formatObj.statusText' 
+						}" /> -->
+						<!-- path : 경로, formatter : 함수명  (controller에 정의됨)-->
+						<!-- 이렇게 사용하는 이유가 2가지 이유가 있는데, 
+							1. statusText를 view 하나에서 사용하고 있는데, 여러뷰에서 사용할 경우에 관리포인트를 용이하게 하기 위해서  -->
+							<ObjectStatus text="{ 
+							path: 'invoice>ShippedDate',
+							formatter: '.formatObj.changeDateText'}" />
+				</firstStatus>
+			</ObjectListItem>	
 		</items>
 	</List>
 </mvc:View>
