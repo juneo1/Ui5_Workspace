@@ -19,6 +19,9 @@ sap.ui.define([
 			};
 			var oModel = new JSONModel(oData);
 			this.setModel(oModel);
+			// 두번째 Model 이름은 생략가능(단, 하나의 Model 가능)
+			// setModel(첫번째(Model), 두번째(Model이름))
+			
 			
 			var i18nModel = new ResourceModel({
 				bundleName: "sap.ui.demo.walkthrough.i18n.i18n"
